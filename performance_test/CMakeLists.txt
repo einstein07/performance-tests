@@ -163,6 +163,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "${CMAKE_CURRENT_SOURCE_DIR}/src:msg/Point32.${MESSAGE_FILE_EXTENSION}"
     "${CMAKE_CURRENT_SOURCE_DIR}/src:msg/Polygon.${MESSAGE_FILE_EXTENSION}"
     "${CMAKE_CURRENT_SOURCE_DIR}/src:msg/Vector3.${MESSAGE_FILE_EXTENSION}"
+    
+    "${CMAKE_CURRENT_SOURCE_DIR}/src:msg/Blob.${MESSAGE_FILE_EXTENSION}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src:msg/BlobList2.${MESSAGE_FILE_EXTENSION}"
 
     DEPENDENCIES builtin_interfaces std_msgs sensor_msgs)
 

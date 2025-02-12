@@ -48,6 +48,9 @@
 #include <performance_test/msg/radar_detection.hpp>
 #include <performance_test/msg/radar_track.hpp>
 
+#include <performance_test/msg/blob.hpp>
+#include <performance_test/msg/blob_list2.hpp>
+
 // FastRTPS Types:
 #ifdef PERFORMANCE_TEST_FASTRTPS_ENABLED
   #include <fast_rtps/Array1k_PubSubTypes.h>
@@ -992,13 +995,24 @@ public:
     return std::string("RadarTrack");
   }
 };
+
+class BlobList2
+{
+public:
+  using RosType = performance_test::msg::BlobList2;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList2");
+  }
+};
 ///  \endcond
 
 using TopicTypeList = std::tuple<Array1k, Array4k, Array16k, Array32k, Array60k, Array1m,
     Array2m, Array4m, Array8m,
     Struct16, Struct256, Struct4k,
     PointCloud512k, PointCloud1m, PointCloud2m, PointCloud4m, PointCloud8m,
-    Range, NavSatFix, RadarDetection, RadarTrack>;
+    Range, NavSatFix, RadarDetection, RadarTrack, BlobList2>;
 
 /// Returns a vector of supported topic names.
 inline std::vector<std::string> supported_topic_names()
