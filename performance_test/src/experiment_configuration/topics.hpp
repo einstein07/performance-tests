@@ -50,6 +50,12 @@
 
 #include <performance_test/msg/blob.hpp>
 #include <performance_test/msg/blob_list2.hpp>
+#include <performance_test/msg/blob_list50.hpp>
+#include <performance_test/msg/blob_list100.hpp>
+#include <performance_test/msg/blob_list150.hpp>
+#include <performance_test/msg/blob_list200.hpp>
+#include <performance_test/msg/blob_list500.hpp>
+#include <performance_test/msg/blob_list1k.hpp>
 
 // FastRTPS Types:
 #ifdef PERFORMANCE_TEST_FASTRTPS_ENABLED
@@ -1006,13 +1012,74 @@ public:
     return std::string("BlobList2");
   }
 };
+class BlobList50
+{
+public:
+  using RosType = performance_test::msg::BlobList50;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList50");
+  }
+};
+class BlobList100
+{
+public:
+  using RosType = performance_test::msg::BlobList100;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList100");
+  }
+};
+class BlobList150
+{
+public:
+  using RosType = performance_test::msg::BlobList150;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList150");
+  }
+};
+class BlobList200
+{
+public:
+  using RosType = performance_test::msg::BlobList200;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList200");
+  }
+};
+class BlobList500
+{
+public:
+  using RosType = performance_test::msg::BlobList500;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList500");
+  }
+};
+class BlobList1k
+{
+public:
+  using RosType = performance_test::msg::BlobList1k;
+
+  static std::string topic_name()
+  {
+    return std::string("BlobList1k");
+  }
+};
 ///  \endcond
 
 using TopicTypeList = std::tuple<Array1k, Array4k, Array16k, Array32k, Array60k, Array1m,
     Array2m, Array4m, Array8m,
     Struct16, Struct256, Struct4k,
     PointCloud512k, PointCloud1m, PointCloud2m, PointCloud4m, PointCloud8m,
-    Range, NavSatFix, RadarDetection, RadarTrack, BlobList2>;
+    Range, NavSatFix, RadarDetection, RadarTrack, BlobList2, BlobList50, 
+    BlobList100, BlobList150, BlobList200, BlobList500, BlobList1k>;
 
 /// Returns a vector of supported topic names.
 inline std::vector<std::string> supported_topic_names()
